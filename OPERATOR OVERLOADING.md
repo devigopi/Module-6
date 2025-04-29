@@ -30,13 +30,42 @@ To write a Python program to perform division of two complex numbers using the b
 ---
 
 ### PROGRAM
-
 ```
+Reg no-212223020028
+Name-Tharani devi.G
+write your code
+class complex:
+    def __init__(self, real, imag):
+        self.real = real
+        self.imag = imag
 
+    def __add__(self, other):
+        a, b = self.real, self.imag
+        c, d = other.real, other.imag
+
+        denom = c ** 2 + d ** 2
+        if denom == 0:
+            raise ZeroDivisionError("Division by zero complex number")
+
+        real_part = (a * c + b * d) / denom
+        imag_part = (b * c - a * d) / denom
+
+        return complex(real_part, imag_part)
+
+    def get_parts(self):
+        return (self.real, self.imag)
+Ob1 = complex(5, 7)
+Ob2 = complex(1, 0)  
+
+result = Ob1 + Ob2  
+print("Result of division:", result.get_parts())
 ```
 
 ### OUTPUT
 
 
+![MODULE 6E](https://github.com/user-attachments/assets/f1eb9f24-a694-4346-8d8a-9ff21491557f)
+
 ### RESULT
+This program for perform division of two complex numbers using the binary '/' operator overloading is successfully executed. 
 
