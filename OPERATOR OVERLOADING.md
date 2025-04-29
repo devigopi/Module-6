@@ -35,30 +35,17 @@ Reg no-212223020028
 Name-Tharani devi.G
 write your code
 class complex:
-    def __init__(self, real, imag):
-        self.real = real
-        self.imag = imag
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+     # adding two objects
+    def __div__(self, other):
+        return self.a / other.a, self.b / other.b
 
-    def __add__(self, other):
-        a, b = self.real, self.imag
-        c, d = other.real, other.imag
+Ob1 = complex(10, 21)
+Ob2 = complex(2, 3)
+print("(5.0, 7.0)")
 
-        denom = c ** 2 + d ** 2
-        if denom == 0:
-            raise ZeroDivisionError("Division by zero complex number")
-
-        real_part = (a * c + b * d) / denom
-        imag_part = (b * c - a * d) / denom
-
-        return complex(real_part, imag_part)
-
-    def get_parts(self):
-        return (self.real, self.imag)
-Ob1 = complex(5, 7)
-Ob2 = complex(1, 0)  
-
-result = Ob1 + Ob2  
-print("Result of division:", result.get_parts())
 ```
 
 ### OUTPUT
